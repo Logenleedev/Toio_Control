@@ -14,7 +14,7 @@
 
 //----------------------------------------
 
-// #define WAIT_SERIAL_CONNECTION 1
+#define WAIT_SERIAL_CONNECTION 1
 
 #define CONTROLLER_HOST "192.168.2.1"
 #define CONTROLLER_PORT 1883
@@ -55,25 +55,30 @@ void App::Setup() {
     // SEGGER_RTT_printf(0, "Hello world\n");
 
     Serial.begin(115200);
+    // Serial.println("Start...");
 #ifdef WAIT_SERIAL_CONNECTION
     while (!Serial) {
         delay(100);
     }
 #endif
-
+   
     ledOn(LED_RED);
     pixels.begin();
 
     Serial.println("Start...");
     // Bluefruit.configUuid128Count(32);
     // Bluefruit.configAttrTableSize(0x3000);
+
+    
     Bluefruit.begin(0, MAX_CUBES);
     Bluefruit.setTxPower(8);
     Bluefruit.Central.setConnectCallback(OnConnect);
     Bluefruit.Central.setDisconnectCallback(OnDisconnect);
 
-    // Use bluetooth address as Ethernet MAC address...
+    
+         // Use bluetooth address as Ethernet MAC address...
     auto bladdr = Bluefruit.getAddr();
+    
     auto mac = &(bladdr.addr[0]);
     {
         // sprintf(mac_address, "%02X:%02X:%02X:%02X:%02X:%02X", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
@@ -81,14 +86,18 @@ void App::Setup() {
     }
 
     Serial.println("Initialize Ethernet with DHCP:");
+
+    
+
     if (Ethernet.begin(mac) == 0) {
+        
         Serial.println("Failed to configure Ethernet using DHCP");
         while (true) {
             digitalToggle(LED_RED);
             delay(300);
         }
     }
-    Serial.print("  DHCP assigned IP ");
+    Serial.print("DHCP assigned IP");
     // Serial.println(Ethernet.localIP());
     {
         auto addr = Ethernet.localIP();
