@@ -25,3 +25,5 @@ https://twitter.com/Saqoosha/status/1333233470143774720
 - [Custom power distribution board](10-powerpcb/)
 
 ![IMG_5856](https://user-images.githubusercontent.com/27694/143379298-fea5e6da-6c5a-4b97-9892-152cacb88424.jpeg)
+
+Credit: Saqoosha & Whatever Inc
