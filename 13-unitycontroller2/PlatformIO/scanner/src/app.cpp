@@ -31,9 +31,10 @@ public:
 
 //----------------------------------------
 
-// #define WAIT_SERIAL_CONNECTION 1
+#define WAIT_SERIAL_CONNECTION 1
 
-#define CONTROLLER_HOST "192.168.2.1"
+// #define CONTROLLER_HOST "192.168.2.1"
+#define CONTROLLER_HOST "192.168.0.101"
 #define CONTROLLER_PORT 11111
 
 EthernetClient ethernet;
@@ -96,9 +97,11 @@ void setup()
 
     // Use bluetooth address as Ethernet MAC address...
     auto mac = Bluefruit.getAddr().addr;
+   
     Serial.print("Bluetooth address: ");
     Serial.printBuffer(mac, 6, ':');
     Serial.println("");
+
 
     Serial.println("Initialize Ethernet with DHCP:");
     if (Ethernet.begin(mac) == 0)
