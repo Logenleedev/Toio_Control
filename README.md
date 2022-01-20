@@ -6,6 +6,9 @@ This repository contains the experimental code for the ZOROZORO project, which c
 
 https://twitter.com/Saqoosha/status/1333233470143774720
 
+## Connection Set up
+[![Connection-Diagram.png](https://i.postimg.cc/g0WYf2hG/Connection-Diagram.png)](https://postimg.cc/0zVRSxZ4)
+
 ## Architecture
 The system works as the following steps:
 1. Scanner and Bridges connects to Controller.
