@@ -14,6 +14,9 @@ The system works as the following steps:
 4. Controller finds Bridge which has capacity to connect to the cubes.
 5. Controller sends cube address to Bridge to connect it.
 6. After the connection is established, Controller can send commands to cubes.
+
+<br/>
+
 ![image](https://user-images.githubusercontent.com/27694/143379123-c8bad323-9bec-4a0f-b77d-f4c1f9a01e32.png)
 
 | Module          | Role                                                                                              | Source code                                                                    |
