@@ -27,10 +27,10 @@ class Address {
 };
 
 //----------------------------------------
+//
+#define WAIT_SERIAL_CONNECTION 1
 
-// #define WAIT_SERIAL_CONNECTION 1
-
-#define CONTROLLER_HOST "192.168.2.1"
+#define CONTROLLER_HOST "192.168.0.101"
 #define CONTROLLER_PORT 1883
 
 static EthernetClient ethernet;

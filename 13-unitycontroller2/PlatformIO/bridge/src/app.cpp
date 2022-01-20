@@ -14,7 +14,7 @@
 
 //----------------------------------------
 
-#define WAIT_SERIAL_CONNECTION 1
+// #define WAIT_SERIAL_CONNECTION 1
 
 #define CONTROLLER_HOST "192.168.0.101"
 #define CONTROLLER_PORT 1883
@@ -76,7 +76,7 @@ void App::Setup() {
     Bluefruit.Central.setDisconnectCallback(OnDisconnect);
 
     
-         // Use bluetooth address as Ethernet MAC address...
+    // Use bluetooth address as Ethernet MAC address...
     auto bladdr = Bluefruit.getAddr();
 
     auto mac = &(bladdr.addr[0]);
