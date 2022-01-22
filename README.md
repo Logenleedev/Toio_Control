@@ -53,6 +53,12 @@ Navigate to the folder where you download adafruit-nrfutil-macos and run adafrui
 ./adafruit-nrfutil-macos --verbose dfu serial --package feather_nrf52840_express_bootloader-0.2.9_s140_6.1.1.zip -p [board name] -b 115200 --singlebank --touch 1200
 ```
 
+or 
+
+```
+adafruit-nrfutil --verbose dfu serial --package feather_nrf52840_express_bootloader-0.6.3_s140_6.1.1.zip -p [board name] -b 115200 --singlebank --touch 1200
+```
+
 Lastly, check the INFO_UF2.TXT file inside your board drive, the version should change from 0.2.x to 0.6.1 or newer.
 
 
