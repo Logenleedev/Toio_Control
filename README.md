@@ -72,4 +72,27 @@ Lastly, check the INFO_UF2.TXT file inside your board drive, the version should 
 
 ![IMG_5856](https://user-images.githubusercontent.com/27694/143379298-fea5e6da-6c5a-4b97-9892-152cacb88424.jpeg)
 
+
+## Usage Guide
+1. Use external power supply to power the bridges and scanner
+2. Navigate to ```14-cubecontroller``` folder and run ```RUST_LOG=debug cargo run```
+3. The application should work!
+
+## Customize Code
+If you want to run this system, you need to change the following parameters:
+
+
+
+## Debug Reference
+
+If the system does not work as expected, please check the following:
+- Confirm that the bridge modules can connect to the controller.
+(Check the bridge and controller logs)
+- Confirm that the scanner module can connect to the controller.
+(Check the scanner and controller logs.)
+- Turn on the cube, then check the scanner logs to see if it detects the cube.
+- Scanner will send the detected cube’s mac address to the controller. So check the log of controller whether received the mac address properly.
+
+
+
 Credit: Saqoosha & Whatever Inc

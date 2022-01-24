@@ -24,7 +24,8 @@ use std::thread;
 use std::time::Instant;
 
 static KEYWORDS: phf::Map<&'static str, u8> = phf_map! {
-    "192.168.0.102" => 1, 
+    //enter bridge id
+    "192.168.0.100" => 1, 
 };
 
 const DOTS_PER_METER: f64 = 411.0 / 0.560;

@@ -32,7 +32,7 @@ public:
 //----------------------------------------
 
 // #define WAIT_SERIAL_CONNECTION 0
-
+// change CONTROLLER_HOST to your own ethernet id
 // #define CONTROLLER_HOST "192.168.2.1"
 #define CONTROLLER_HOST "192.168.0.101"
 #define CONTROLLER_PORT 11111
