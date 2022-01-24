@@ -1,6 +1,4 @@
-# ZOROZORO Experiments
 
-This repository contains the experimental code for the ZOROZORO project, which controls 256 toio cubes simultaneously.
 
 ![toio260_1126](https://user-images.githubusercontent.com/27694/143378054-eb7cffa7-544f-4d6e-9711-e092c7f7c5f6.gif)
 
@@ -95,4 +93,6 @@ If the system does not work as expected, please check the following:
 
 
 
-Credit: Saqoosha & Whatever Inc
+## Acknowledgement 
+
+This repository was initially developed by Saqoosha @ [Whatever Inc](https://whatever.co/). 
