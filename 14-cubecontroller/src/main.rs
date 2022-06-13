@@ -21,6 +21,7 @@ use piston::window::WindowSettings;
 use std::collections::hash_map::Entry::{Occupied, Vacant};
 use std::collections::HashMap;
 use std::thread;
+use std::fs;
 use std::time::Instant;
 
 static KEYWORDS: phf::Map<&'static str, u8> = phf_map! {
@@ -66,8 +67,17 @@ struct App<'a> {
     glyph_cache: GlyphCache<'a>,
 }
 
-impl App<'_> {
+impl App<'_> {    
     fn new(gl_version: OpenGL) -> App<'static> {
+        fn open_assets() -> &'static str {
+            if fs::metadata("assets/RobotoCondensed-Regular.ttf").is_ok() {
+                return "assets/RobotoCondensed-Regular.ttf";
+            }
+            else {
+                return "../assets/RobotoCondensed-Regular.ttf";
+            }
+        }
+
         App {
             gl: GlGraphics::new(gl_version),
             sender: None,
@@ -76,7 +86,7 @@ impl App<'_> {
             cubes: HashMap::with_capacity(256),
             bridges: HashMap::with_capacity(32),
             count: 0,
-            glyph_cache: GlyphCache::new("assets/RobotoCondensed-Regular.ttf", (), TextureSettings::new()).unwrap(),
+            glyph_cache: GlyphCache::new(open_assets(), (), TextureSettings::new()).unwrap(),
         }
     }
 
